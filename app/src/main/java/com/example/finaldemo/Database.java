@@ -38,8 +38,8 @@ public class Database extends SQLiteOpenHelper{
                 + "day INTEGER, month INTEGER, year INTEGER)";
 
         String review_query = "CREATE TABLE Review (review_num INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + "std_num, ven_num, rating_1 INTEGER, rating_2 INTEGER, rating_3 INTEGER, "
-                + "rating_4 INTEGER, comment TEXT)";
+                + "std_num, ven_num, cleanliness INTEGER, efficiency INTEGER, quality INTEGER, "
+                + "cust_service INTEGER, comment TEXT)";
 
         String voucher_query = "CREATE TABLE Voucher (voucher_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "std_num TEXT, ven_num TEXT, day INTEGER, month INTEGER, year INTEGER)";
