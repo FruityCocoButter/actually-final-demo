@@ -43,7 +43,7 @@ public class CustomerModel {
         return true;
     }
 
-    private ArrayList<String> getCustomer(String stu_num){
+    public ArrayList<String> getCustomer(String stu_num){
         SQLiteDatabase datab = db.getReadableDatabase();
         ArrayList<String> customerRow = new ArrayList<>();
 

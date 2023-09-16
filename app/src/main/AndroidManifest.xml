@@ -14,17 +14,18 @@
         android:theme="@style/Theme.FinalDemo"
         tools:targetApi="31">
 
-        <activity android:name=".SendOTP"
-            android:exported="true">
+        <activity android:name=".SendOTP"/>
+        <activity android:name=".VerifyOTP" />
+        <activity android:name=".Login" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Profile" />
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".VerifyOTP" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -11,11 +11,11 @@ public class VendorModel {
         this.db=db;
     }
 
-    public void addNewVendor(String ven_num, String password, String qr_string, String location){
+    public void addNewVendor(String password, String qr_string, String location){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put("ven_num", ven_num);
+
         values.put("password", password);
         values.put("qr_string", qr_string);
         values.put("location", location);
@@ -25,9 +25,9 @@ public class VendorModel {
         datab.close();
     }
 
-    public boolean checkIfVendorExists(String ven_num){
+    public boolean checkIfVendorExists(int ven_num){
         SQLiteDatabase datab = db.getReadableDatabase();
-        Cursor res = datab.rawQuery( "select * from Vendor where ven_num = '"+ ven_num+"'", null );
+        Cursor res = datab.rawQuery( "select * from Vendor where ven_num = '"+ String.valueOf(ven_num)+"'", null );
 
         if(!res.moveToFirst()){
             return false;
@@ -40,7 +40,7 @@ public class VendorModel {
         SQLiteDatabase datab = db.getReadableDatabase();
         ArrayList<String> vendorRow = new ArrayList<>();
 
-        Cursor res = datab.rawQuery( "select * from Vendor where ven_num = '"+ ven_num+"'", null );
+        Cursor res = datab.rawQuery( "select * from Vendor where ven_num = '"+ String.valueOf(ven_num)+"'", null );
 
         res.moveToFirst();
         for(int i=0; i<4; i++){
@@ -49,10 +49,10 @@ public class VendorModel {
         return vendorRow;
     }
 
-    public void deleteVendor(String ven_num) {
+    public void deleteVendor(int ven_num) {
         SQLiteDatabase datab = db.getWritableDatabase();
 
-        datab.delete("Vendor", "ven_num=?", new String[]{ven_num});
+        datab.delete("Vendor", "ven_num=?", new String[]{String.valueOf(ven_num)});
         datab.close();
     }
 

@@ -12,11 +12,11 @@ public class VoucherModel {
         this.db=db;
     }
 
-    public void addNewVoucher(String voucher_id, String stu_num, String ven_num, int day, int month, int year){
+    public void addNewVoucher(String stu_num, String ven_num, int day, int month, int year){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put("voucher_id", voucher_id);
+
         values.put("stu_num", stu_num);
         values.put("ven_len", ven_num);
         values.put("day", String.valueOf(day));

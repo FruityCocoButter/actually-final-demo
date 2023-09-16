@@ -12,11 +12,11 @@ public class QueueModel {
         this.db=db;
     }
 
-    public void addNewQueue(int queue_num, String ven_num, int queue_length, int order_freq, int day, int month, int year){
+    public void addNewQueue(String ven_num, int queue_length, int order_freq, int day, int month, int year){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put("queue_num", String.valueOf(queue_num));
+
         values.put("ven_num", ven_num);
         values.put("queue_length", String.valueOf(queue_length));
         values.put("order_freq", String.valueOf(order_freq));

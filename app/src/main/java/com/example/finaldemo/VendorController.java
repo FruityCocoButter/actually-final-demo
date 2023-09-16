@@ -11,7 +11,7 @@ public class VendorController {
         menu = new MenuModel(db);
     }
 
-    public boolean vendorLogin(String vendor_num){
+    public boolean vendorLogin(int vendor_num){
         return vendor.checkIfVendorExists(vendor_num);
     }
 
@@ -23,14 +23,6 @@ public class VendorController {
         vendor.addNewVendor(ven_number,password,"s");
     }
 
-    public void updateMenu(String name, String type, int price){
-        menu.addNewMenuItem(name,type,price);
-    }
-
-    public void deleteMenuItem(String name){
-
-        menu.deleteMenuItem(name);
-    }
 
 
 }

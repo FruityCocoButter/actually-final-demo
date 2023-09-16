@@ -30,7 +30,7 @@ public class Database extends SQLiteOpenHelper{
                 + "surname TEXT,"
                 + "email TEXT)";
 
-        String vendor_query = "CREATE TABLE Vendor (ven_num TEXT PRIMARY KEY, "
+        String vendor_query = "CREATE TABLE Vendor (ven_num INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "password TEXT, qr_string TEXT, location TEXT)";
 
         String menuitem_query = "CREATE TABLE MenuItem (item_name TEXT PRIMARY KEY, "

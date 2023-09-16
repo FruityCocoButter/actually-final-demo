@@ -12,11 +12,11 @@ public class ReviewModel {
         this.db=db;
     }
 
-    public void addNewReview(int review_num, String stu_num, String ven_num, int clean, int eff, int quality, String comment){
+    public void addNewReview(String stu_num, String ven_num, int clean, int eff, int quality, String comment){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put("review_num", String.valueOf(review_num));
+
         values.put("stu_num", stu_num);
         values.put("ven_num", ven_num);
         values.put("cleanliness", String.valueOf(clean));
