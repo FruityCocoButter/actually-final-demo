@@ -25,10 +25,13 @@ public class Database extends SQLiteOpenHelper{
         String cust_query = "CREATE TABLE Customer ("
                 + "stu_num TEXT PRIMARY KEY, "
                 + "password TEXT, "
-                + "points INTEGER)";
+                + "points INTEGER, "
+                + "name TEXT,"
+                + "surname TEXT,"
+                + "email TEXT)";
 
         String vendor_query = "CREATE TABLE Vendor (ven_num TEXT PRIMARY KEY, "
-                + "password TEXT, qr_string TEXT)";
+                + "password TEXT, qr_string TEXT, location TEXT)";
 
         String menuitem_query = "CREATE TABLE MenuItem (item_name TEXT PRIMARY KEY, "
                 + "type TEXT, price INTEGER)";

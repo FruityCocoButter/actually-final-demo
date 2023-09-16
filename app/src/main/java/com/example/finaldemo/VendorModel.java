@@ -11,13 +11,14 @@ public class VendorModel {
         this.db=db;
     }
 
-    public void addNewVendor(String ven_num, String password, String qr_string){
+    public void addNewVendor(String ven_num, String password, String qr_string, String location){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         values.put("ven_num", ven_num);
         values.put("password", password);
         values.put("qr_string", qr_string);
+        values.put("location", location);
 
         datab.insert("Vendor", null, values);
 
@@ -42,7 +43,7 @@ public class VendorModel {
         Cursor res = datab.rawQuery( "select * from Vendor where ven_num = '"+ ven_num+"'", null );
 
         res.moveToFirst();
-        for(int i=0; i<3; i++){
+        for(int i=0; i<4; i++){
             vendorRow.add(res.getString(i));
         }
         return vendorRow;
