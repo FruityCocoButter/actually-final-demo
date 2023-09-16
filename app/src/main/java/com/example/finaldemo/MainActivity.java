@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    Database db = new Database(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
