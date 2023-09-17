@@ -4,9 +4,9 @@ public class MenuController {
 
     MenuModel menu;
 
-    public MenuController(Database db){
+    public MenuController(){
 
-        menu = new MenuModel(db);
+        menu = new MenuModel();
     }
     public String populateScreen(String item){
 

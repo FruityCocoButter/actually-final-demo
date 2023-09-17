@@ -9,10 +9,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Database extends SQLiteOpenHelper{
+public class Database extends SQLiteOpenHelper implements Serializable {
     private static final String DB_NAME = "foodiesdb";
     private static final int DB_VERSION = 1;
 

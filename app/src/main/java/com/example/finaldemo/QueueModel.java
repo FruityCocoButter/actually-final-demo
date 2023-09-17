@@ -5,14 +5,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
-public class QueueModel {
-    Database db;
+public class QueueModel extends DatabaseAccessor{
 
-    public QueueModel(Database db){
-        this.db=db;
+    public QueueModel(){
     }
 
-    public void addNewQueue(String ven_num, int queue_length, int order_freq, int day, int month, int year){
+    public void addNewQueue(int ven_num, int queue_length, int order_freq, int day, int month, int year){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 

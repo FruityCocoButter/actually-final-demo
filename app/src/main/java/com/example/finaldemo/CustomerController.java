@@ -2,6 +2,7 @@ package com.example.finaldemo;
 
 import android.content.Context;
 import android.media.Image;
+import android.util.Log;
 
 public class CustomerController {
 
@@ -9,14 +10,14 @@ public class CustomerController {
     VendorModel vendor;
 
     ReviewModel review;
-    public CustomerController(Database db){
-        customer = new CustomerModel(db);
-        vendor = new VendorModel(db);
-        review = new ReviewModel(db);
+    public CustomerController(Context context){
+        customer = new CustomerModel(context);
+        vendor = new VendorModel();
+        review = new ReviewModel();
     }
 
     public boolean customerLogin(String username,  String password){
-
+        Log.i("username_check", username);
         return customer.checkIfCustomerExists(username);
 
     }
@@ -32,5 +33,5 @@ public class CustomerController {
     public void scanQR(Image image){
         // convert image QR
     }
-    
+
 }

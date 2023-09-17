@@ -10,10 +10,9 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class CustomerModel {
-    Database db;
-    public CustomerModel(Database db){
-        this.db=db;
+public class CustomerModel extends DatabaseAccessor{
+    public CustomerModel(Context context){
+        super(context);
     }
 
     public void addNewCustomer(String stu_num, String password, int points, String name, String surname, String email){

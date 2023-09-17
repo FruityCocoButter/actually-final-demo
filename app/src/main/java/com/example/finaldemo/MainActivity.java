@@ -10,7 +10,7 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    Database db = new Database(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, Login.class);
         this.startActivity(intent);
+
 
 
     }

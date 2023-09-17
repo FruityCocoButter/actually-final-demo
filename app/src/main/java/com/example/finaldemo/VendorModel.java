@@ -5,10 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
-public class VendorModel {
-    Database db;
-    public VendorModel(Database db){
-        this.db=db;
+public class VendorModel extends DatabaseAccessor{
+    public VendorModel(){
     }
 
     public void addNewVendor(String password, String qr_string, String location){
@@ -36,7 +34,7 @@ public class VendorModel {
         return true;
     }
 
-    public ArrayList<String> getVendor(String ven_num){
+    public ArrayList<String> getVendor(int ven_num){
         SQLiteDatabase datab = db.getReadableDatabase();
         ArrayList<String> vendorRow = new ArrayList<>();
 

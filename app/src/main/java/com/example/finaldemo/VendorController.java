@@ -5,22 +5,22 @@ public class VendorController {
     VendorModel vendor ;
     MenuModel menu;
 
-    public VendorController(Database db){
+    public VendorController(){
 
-        vendor = new VendorModel(db);
-        menu = new MenuModel(db);
+        vendor = new VendorModel();
+        menu = new MenuModel();
     }
 
     public boolean vendorLogin(int vendor_num){
         return vendor.checkIfVendorExists(vendor_num);
     }
 
-    public String populateVendorAcc(String vendor_num){
+    public String populateVendorAcc(int vendor_num){
         return vendor.getVendor(vendor_num).toString();
     }
 
-    public void vendorSignUp(String ven_number, String password){
-        vendor.addNewVendor(ven_number,password,"s");
+    public void vendorSignUp(String password, String qr_string, String location){
+        vendor.addNewVendor(password,qr_string, location);
     }
 
 

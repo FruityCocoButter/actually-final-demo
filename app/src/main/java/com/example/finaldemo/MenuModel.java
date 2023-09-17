@@ -5,12 +5,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
-public class MenuModel {
+public class MenuModel extends DatabaseAccessor{
 
-    Database db;
-    public MenuModel(Database db){
-        this.db=db;
-    }
+
+    public MenuModel(){}
 
     public void addNewMenuItem(String item_name, String type, int price){
         SQLiteDatabase datab = db.getWritableDatabase();

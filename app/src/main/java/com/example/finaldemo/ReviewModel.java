@@ -5,20 +5,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
-public class ReviewModel {
-    Database db;
+public class ReviewModel extends DatabaseAccessor{
 
-    public ReviewModel(Database db){
-        this.db=db;
+    public ReviewModel(){
     }
 
-    public void addNewReview(String stu_num, String ven_num, int clean, int eff, int quality, String comment){
+    public void addNewReview(String stu_num, int ven_num, int clean, int eff, int quality, String comment){
         SQLiteDatabase datab = db.getWritableDatabase();
         ContentValues values = new ContentValues();
 
 
         values.put("stu_num", stu_num);
-        values.put("ven_num", ven_num);
+        values.put("ven_num", String.valueOf(ven_num));
         values.put("cleanliness", String.valueOf(clean));
         values.put("efficiency", String.valueOf(eff));
         values.put("quality", String.valueOf(quality));
