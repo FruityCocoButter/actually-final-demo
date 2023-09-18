@@ -16,7 +16,8 @@ public class CustomerModel extends DatabaseAccessor{
     }
 
     public void addNewCustomer(String stu_num, String password, int points, String name, String surname, String email){
-        SQLiteDatabase datab = db.getWritableDatabase();
+        SQLiteDatabase datab =db.getWritableDatabase();
+
         ContentValues values = new ContentValues();
 
         values.put("stu_num", stu_num);

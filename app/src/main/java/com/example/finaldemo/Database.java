@@ -31,11 +31,11 @@ public class Database extends SQLiteOpenHelper implements Serializable {
                 + "surname TEXT,"
                 + "email TEXT)";
 
-        String vendor_query = "CREATE TABLE Vendor (ven_num INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + "password TEXT, qr_string TEXT, location TEXT)";
+        String vendor_query = "CREATE TABLE Vendor ("
+                + "vendor_name TEXT PRIMARY KEY, password TEXT, qr_string TEXT, location TEXT, contact_details TEXT, rating INTEGER, operating_times TEXT)";
 
         String menuitem_query = "CREATE TABLE MenuItem (item_name TEXT PRIMARY KEY, "
-                + "type TEXT, price INTEGER)";
+                + "type TEXT, price INTEGER, vendor_name TEXT)";
 
         String queue_query = "CREATE TABLE Queue (queue_num INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "ven_num TEXT, queue_length INTEGER, order_freq INTEGER, "

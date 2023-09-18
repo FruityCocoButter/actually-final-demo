@@ -12,7 +12,7 @@ public class CustomerController {
     ReviewModel review;
     public CustomerController(Context context){
         customer = new CustomerModel(context);
-        vendor = new VendorModel();
+        vendor = new VendorModel(context);
         review = new ReviewModel();
     }
 

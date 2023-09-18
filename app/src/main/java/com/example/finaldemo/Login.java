@@ -66,7 +66,8 @@ public class Login extends AppCompatActivity {
 
         else{
             /**move to next screen**/
-            Intent intent = new Intent(view.getContext(), SendOTP.class);
+            Intent intent = new Intent(view.getContext(),VendorSelection.class);
+            intent.putExtra("username", person_number);
             view.getContext().startActivity(intent);
         }
 

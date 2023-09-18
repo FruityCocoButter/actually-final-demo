@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MenuList">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="menu"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="20sp"
+            android:id="@+id/menu"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="34dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_person_24"
+            app:civ_border_color="@color/black"
+
+            app:layout_constraintBottom_toTopOf="@+id/vendors"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/vendors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:fontFamily="sans-serif"
+            android:text="Vendors"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/menu"
+            tools:layout_editor_absoluteX="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/vendors"
+            android:layout_marginLeft="20sp"
+            android:padding="15sp"
+            android:text="Search"
+            android:layout_marginRight="20sp"
+            android:textSize="20sp"
+            android:textColor="#686666"
+            android:id="@+id/searchBar"
+            android:background="@drawable/search_bar"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawableTint="#4C4A4A"
+            android:drawablePadding="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/searchBar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/foodMenu"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/foodMenu"
+            android:id="@+id/vendorList"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/vendorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendor List"
+                android:textColor="#494646"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vendor_list_listed"
+            android:layout_margin="20dp"
+            app:layout_constraintTop_toBottomOf="@id/vendorList"
+            android:gravity="center"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

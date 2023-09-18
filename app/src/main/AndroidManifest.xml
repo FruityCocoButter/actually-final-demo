@@ -19,7 +19,14 @@
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity android:name=".Profile" />
-        <activity android:name=".DatabaseActivity" />
+        <activity android:name=".MenuList"/>
+        <activity android:name=".MenuPage"/>
+        <activity android:name=".ReviewPage"/>
+        <activity android:name=".RewardPage"/>
+        <activity android:name=".AccountDisplay"/>
+        <activity android:name=".VendorSelection"/>
+        <activity android:name=".MainOptions"/>
+        <activity android:name=".VendorInfo"/>
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

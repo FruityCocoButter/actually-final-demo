@@ -84,18 +84,16 @@ public class SignUp extends AppCompatActivity {
         if (!cust.customerLogin(person_number, password)){
             /**move to next screen**/
             cust.customerSignup(person_number, password, 0, name, surname, email);
-            Intent intent = new Intent(view.getContext(), SendOTP.class);
+            Intent intent = new Intent(view.getContext(), VendorSelection.class);
+            intent.putExtra("username", person_number);
             view.getContext().startActivity(intent);
         }
 
 
         else{
              /**if customer signed up, log in**/
-             try{
-                 Thread.sleep(20000);
-             }catch(InterruptedException ex){
-
-             }
+            Intent intent = new Intent(view.getContext(), Login.class);
+            view.getContext().startActivity(intent);
         }
 
     }

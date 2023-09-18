@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/vendor_card_screen"
+    tools:context=".VendorSelection">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/budget_rolls"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/budget_rolls_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+
+                <ImageButton
+                    android:id="@+id/budget_rolls_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="budgetRollsHandler"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="vendor_profile"
+                    android:src="@drawable/ic_baseline_fastfood_24" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/budget_rolls_text"
+                android:layout_width="139dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/budget_rolls_layout"
+                android:text="Budget Rolls"
+                android:textSize="20dp" />
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/budget_rolls_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+    android:id="@+id/varsity_fast_foods"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_margin="20dp"
+    app:cardBackgroundColor="#fff"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="10dp">
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
+        android:padding="20dp">
+            <RelativeLayout
+                android:id="@+id/varsity_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+                <ImageButton
+                    android:id="@+id/varsity_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="varsityHandler"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="vendor_profile"
+                    android:src="@drawable/ic_baseline_fastfood_24" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/varsity_text"
+                android:layout_width="156dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/varsity_layout"
+                android:text="Varsity Fast Foods"
+                android:textSize="20dp" />
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/varsity_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/afriquezeen"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:padding="20dp">
+            <RelativeLayout
+                android:id="@+id/afriquezeen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+                <ImageButton
+                    android:id="@+id/afriquezeen_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="afriquezeenHandler"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_fastfood_24"
+                    android:contentDescription="vendor_profile" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/afriquezeen_text"
+                android:layout_width="139dp"
+                android:layout_height="40dp"
+                android:text="Afriquezeen"
+                android:textSize="20dp"
+                android:layout_below="@+id/afriquezeen_layout" />
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/afriquezeen_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/best_quality"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:padding="20dp">
+            <RelativeLayout
+                android:id="@+id/best_quality_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+                <ImageButton
+                    android:id="@+id/best_quality_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="bestQualityHandler"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_fastfood_24"
+                    android:contentDescription="vendor_profile" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/best_quality_text"
+                android:layout_width="139dp"
+                android:layout_height="40dp"
+                android:text="Best Quality"
+                android:textSize="20dp"
+                android:layout_below="@+id/best_quality_layout"/>
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/best_quality_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dansshop"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:padding="20dp">
+            <RelativeLayout
+                android:id="@+id/dansshop_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+                <ImageButton
+                    android:id="@+id/dansshop_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="dansshop"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_fastfood_24"
+                    android:contentDescription="vendor_profile" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dansshop_text"
+                android:layout_width="156dp"
+                android:layout_height="48dp"
+                android:text="Dan's Health Shop"
+                android:textSize="20dp"
+                android:layout_below="@+id/dansshop_layout"/>
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/dansshop_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/campuscafe"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:padding="20dp">
+            <RelativeLayout
+                android:id="@+id/campuscafe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+                <ImageButton
+                    android:id="@+id/campuscafe_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="campusCafeHandler"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_fastfood_24"
+                    android:contentDescription="vendor_profile" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/campuscafe_text"
+                android:layout_width="139dp"
+                android:layout_height="40dp"
+                android:text="Campus Cafe"
+                android:textSize="20dp"
+                android:layout_below="@+id/campuscafe_layout"/>
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/campuscafe_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/prashad"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="303dp"
+            android:padding="20dp">
+            <RelativeLayout
+                android:id="@+id/prashad_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/vendor_back_fill">
+
+                <ImageButton
+                    android:id="@+id/prashad_profile_image"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:onClick="prashadHandler"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_fastfood_24"
+                    android:contentDescription="vendor_profile" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/prashad_text"
+                android:layout_width="139dp"
+                android:layout_height="40dp"
+                android:text="Prashad"
+                android:textSize="20dp"
+                android:layout_below="@+id/prashad_layout" />
+
+            <RatingBar
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/prashad_layout"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:stepSize="5"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</ScrollView>
